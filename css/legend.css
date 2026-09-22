@@ -1,0 +1,66 @@
+/* Painel que apresenta os indicadores de comparação dos palpites. */
+.legend {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 3rem;
+    gap: 10px;
+
+    background: #FFD700;
+    border-radius: 4px;
+
+    box-sizing: border-box;
+
+    span, p, ul {
+        text-align: center;
+        list-style: none;
+        color: #111;
+    }
+
+    & .legend-list {
+
+        display: flex;
+        gap: 0.5rem;
+        padding: 0;
+        margin: 0;
+
+        & .legend-item {
+
+            & .legend-swatch-correct {
+                width: 5rem;
+                height: 3.56rem;
+                background-color: var(--correct);
+                border-radius: 0.3rem;
+            }
+            /* O fundo vermelho também é usado pelos indicadores Maior e Menor. */
+            & .legend-swatch-incorrect {
+                width: 5rem;
+                height: 3.56rem;
+                background-color: var(--incorrect);
+                border-radius: 0.3rem;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                & img {
+                    object-fit: contain;
+                }
+            }
+            & .legend-swatch-partial {
+                width: 5rem;
+                height: 3.56rem;
+                background-color: var(--partial);
+                border-radius: 0.3rem;
+            }
+
+            /* Menor deve ser o último item: reutiliza a seta para cima, girando o SVG. */
+            &:last-child .legend-swatch-arrow img {
+                transform: rotate(180deg);
+            }
+
+        }
+    }
+
+}

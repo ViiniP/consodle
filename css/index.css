@@ -1,0 +1,6 @@
+/* Entrada dos estilos: regras gerais antes dos estilos de cada componente. */
+@import url(styles.css);
+@import url(global.css);
+@import url(main.css);
+@import url(form.css);
+@import url(legend.css);

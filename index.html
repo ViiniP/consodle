@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consodle</title>
+    
+    <!-- Fontes dos títulos e textos; os estilos locais são reunidos em index.css. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <main class="container game">
+        <header>
+            <img src="./assets/logo.svg" alt="Logo Consodle">
+        </header>
+
+        <!-- Área de entrada do palpite do jogador. -->
+        <div class="guess">
+            <h1>Adivinhe o console ou portátil de hoje!</h1>
+
+            <form class="guess-form">
+                <div class="guess-controls">
+                    <input
+                        type="search"
+                        id="console-search"
+                        name="console"
+                        placeholder="Digite o nome de um console..."
+                        autocomplete="off"
+                        required
+                    >
+
+                    <button type="submit" class="guess-button" aria-label="Enviar palpite">
+                        <img src="./assets/images/button.png" alt="">
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Legenda das cores e direções usadas na comparação dos palpites. -->
+        <aside class="legend" aria-labelledby="legend-title">
+                <h2 id="legend-title">Indicadores</h2>
+
+                <ul class="legend-list">
+                    <li class="legend-item">
+                        <span>Correto</span>
+                        <div class="legend-swatch legend-swatch-correct"></div>
+                    </li>
+
+                    <li class="legend-item">
+                        <span>Incorreto</span>
+                        <div class="legend-swatch legend-swatch-incorrect"></div>
+                    </li>
+
+                    <li class="legend-item">
+                        <span>Parcial</span>
+                        <div class="legend-swatch legend-swatch-partial"></div>
+                    </li>
+
+                    <li class="legend-item">
+                        <span>Maior</span>
+                        <div class="legend-swatch legend-swatch-incorrect legend-swatch-arrow">
+                            <img src="./assets/icons/arrow.svg" alt="ícone de seta para cima">
+                        </div>
+                    </li>
+
+                    <li class="legend-item">
+                        <span>Menor</span>
+                        <div class="legend-swatch legend-swatch-incorrect legend-swatch-arrow">
+                            <img src="./assets/icons/arrow.svg" alt="ícone de seta para baixo">
+                        </div>
+                    </li>
+                </ul>
+            </aside>
+    </main>
+</body>
+</html>

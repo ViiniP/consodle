@@ -1,0 +1,21 @@
+/* Área principal centralizada na janela, com respiro nas laterais. */
+.container {
+    width: 100%;
+    height: 100vh;
+    max-width: var(--container-max-width);
+    margin-inline: auto;
+    padding-inline: var(--space-4);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Organiza logo, formulário e legenda em uma coluna. */
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4.375rem;
+    padding-block: var(--space-12);
+}
